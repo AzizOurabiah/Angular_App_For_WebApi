@@ -15,31 +15,34 @@ export class SharedService {
   constructor(private http:HttpClient) { }
 
   getDepList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/departement')
+    return this.http.get<any>(this.APIUrl+'api/departement')
   }
 
   addDepartement(val:any){
-    return this.http.post(this.APIUrl+'/departement', val)
+    return this.http.post(this.APIUrl+'api/departement', val)
   }
   updateDepartement(val: any){
     return this.http.put(this.APIUrl+'departement', val)
   }
   deleteDepartement(val: any){
-    return this.http.delete(this.APIUrl+'/departement', val)
+    return this.http.delete(this.APIUrl+'api/departement', val)
   }
 
   getEmpList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/employee')
+    return this.http.get<any>(this.APIUrl+'api/employee')
   }
 
   addEmployee(val:any){
-    return this.http.post(this.APIUrl+'/employee', val)
+    return this.http.post(this.APIUrl+'api/employee', val)
   }
   updateEmployee(val: any){
-    return this.http.put(this.APIUrl+'employee', val)
+    return this.http.put(this.APIUrl+'api/employee', val)
   }
   deleteEmployee(val: any){
-    return this.http.delete(this.APIUrl+'/employee', val)
+    return this.http.delete(this.APIUrl+'api/employee', val)
   }
 
+  uploadPhoto(val: any){
+    return this.http.post(this.APIUrl+'api/employee/SaveFile', val)
+  }
 }
