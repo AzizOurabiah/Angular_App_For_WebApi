@@ -1,1 +1,20 @@
-<p>show-emp works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>Departement</th>
+            <th>DateOfJoining</th>
+            <th>PhotoFileName</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employeList">
+            <td>{{emp.EmployeeId}}</td>
+            <td>{{emp.EmployeeName}}</td>
+            <td>{{emp.Departement}}</td>
+            <td>{{emp.DateOfJoining}}</td>
+            <td>{{emp.PhotoFileName}}</td>
+        </tr>
+    </tbody>
+</table>

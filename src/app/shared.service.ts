@@ -29,7 +29,7 @@ export class SharedService {
   }
 
   getEmpList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'api/employee')
+    return this.http.get<any>(this.APIUrl+'api/Employee/GetAllDepartment')
   }
 
   addEmployee(val:any){
